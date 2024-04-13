@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Ruta Principal
+Route::get('/home', function () {
+    return view('home');
+});
+
+
+// Rutas para Modulo Cliente
+Route::resource('/cliente','App\Http\Controllers\ControllerCliente');
+
+// Rutas para Modulo Pelicula
+Route::resource('/pelicula','App\Http\Controllers\ControllerPelicula');
+
+// Rutas para Modulo Alquiler
+Route::resource('/alquiler','App\Http\Controllers\ControllerAlquiler');
+
